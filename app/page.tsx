@@ -14,11 +14,11 @@ export default function Home() {
           <p>Explore the Cars you Might Like</p>
         </div>
         <div className="home__filters">
-          <SearchBar/>
+          <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter title='fuel' />
-            <CustomFilter title='year' />
+            <CustomFilter title="fuel" />
+            <CustomFilter title="year" />
           </div>
         </div>
       </div>
