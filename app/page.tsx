@@ -7,10 +7,10 @@ import Image from "next/image";
 
 export default async function Home() {
   const allCars = await fetchCars();
-// console.log(allCars);
+  // console.log(allCars);
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
-  
+
   return (
     <main className="overflow-hidden ">
       <Hero />
@@ -33,7 +33,7 @@ export default async function Home() {
           <section>
             {allCars?.map((car) => (
               <div className="home__cars-wrapper">
-              <CarCard key={car} car={car}/>
+                <CarCard key={car} car={car} />
               </div>
             ))}
           </section>
@@ -43,7 +43,6 @@ export default async function Home() {
             <p>{allCars?.message}</p>
           </div>
         )}
-
       </div>
     </main>
   );
