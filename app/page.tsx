@@ -15,7 +15,7 @@ export default async function Home() {
     <main className="overflow-hidden ">
       <Hero />
 
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
+      <div className='mt-12 padding-x padding-y max-width' id='discover'>
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
           <p>Explore the Cars you Might Like</p>
@@ -31,14 +31,14 @@ export default async function Home() {
 
         {!isDataEmpty ? (
           <section>
+            <div className="home__cars-wrapper">
             {allCars?.map((car) => (
-              <div className="home__cars-wrapper">
                 <CarCard key={car} car={car} />
-              </div>
             ))}
+              </div>
           </section>
         ) : (
-          <div className="home__error-container ">
+          <div className="home__error-container">
             <h2 className="text-black text-xl">Oops, no results</h2>
             <p>{allCars?.message}</p>
           </div>
